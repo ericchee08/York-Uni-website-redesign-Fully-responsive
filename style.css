@@ -1,0 +1,93 @@
+/* Applies to all the html elements, set the padding and margin to zero to fill the page */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    min-height: 100vh; /* height and width of element is equal to 100% of the viewport */
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(york-images/York.jpg); /* linear gradient creates an image consisting of a progressive transition between two or more colors */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    
+    display: flex; /* flex direction defaults to horizontal alignment, used flex-direct: column to change to vertical */
+    padding: 0% 6%;
+    justify-content: space-between; /* space-between defines the alignment along the main axis, distribute free space leftver when either all the flex items on a line - in this case york pushed to left and nav to the right*/
+    align-items: center;
+}
+
+nav img {
+    width: 400px;
+    height: auto;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;  /* removes unordered list bullet points */
+    display: inline-block; /* allows navigation to be horizontal format */
+    padding: 8px 12px;
+    position: relative; /* element is positioned according to the normal flow of the document. Offset does not affect position of any other elements */
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+/* add line below navigation */
+.nav-links ul li::after{
+    content:''; /*content is blank to allow line transition*/
+    width: 0%;
+    height: 2px;
+    background: white;
+    display:block;  /* inline to block, enables the line to be below the nav selections*/
+    margin:auto;
+    transition: 0.5s;
+}
+/* enable the transition of the line */
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 50%;
+    color: white;
+    position: absolute; /* allows positioning exactly where you want it */
+    top: 50%; /* top and left at 50% allows writing to be centre of the page */
+    left: 50%;
+    transform: translate(-50%,-50%); /* centers the text-box in the middle by shifting 50% to the left - It modifies the coordinate space of the CSS*/
+    text-align:center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: white;
+}
+
+.hero-btn {
+    display:inline-block;
+    text-decoration: none;
+    color:white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    /* font-size: 13; */
+    background: transparent;
+    position: relative;
+    cursor: pointer;  /* cursor style - althoeugh pointer is default */
+    
+}
