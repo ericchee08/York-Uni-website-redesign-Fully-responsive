@@ -89,5 +89,64 @@ nav img {
     background: transparent;
     position: relative;
     cursor: pointer;  /* cursor style - althoeugh pointer is default */
-    
+
 }
+
+.hero-btn:hover{
+    border: 1px solid white;
+    background: rgb(37, 37, 37);
+    transition: 1s;
+}
+
+/* hide icons during desktop view */
+nav .fas{
+    display: none;
+}
+
+@media(max-width: 700px){
+
+    nav img {
+        width:150px;
+        height: auto;
+    }
+
+    .text-box h1{
+        font-size: 16px;
+    }
+
+    .text-box p{
+        font-size: 10px;
+    }
+
+    /* mobile navbar to be stacked on top of eachother using display: block; from display: relative */
+    .nav-links ul li{
+        display: block;
+        }
+
+    .nav-links{
+        position: absolute;
+        background:#1f1f1f;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2; /* z-index brings the element layer on top of all other layers, setting it to 0 will be placed behind the text */
+        transition: 1s;    
+    }
+
+    nav .fas{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul{
+        padding: 15px;
+    }
+   
+}
+
+
