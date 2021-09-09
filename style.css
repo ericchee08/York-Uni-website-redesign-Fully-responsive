@@ -224,6 +224,7 @@ h3{
 /* enables full image to fit within box */
 .campus-col img{
     width: 100%;
+    display: block;
 }
 
 .layer{
@@ -234,11 +235,27 @@ h3{
     top: 0;
     left: 0;
     transition: 0.5s;
-    font-size:0;
+    /* font-size:0; */
 }
 
 .layer:hover{
     background: rgba(87, 83, 121, 0.7);
-    font-size: 20px;
-    color:white;
+}
+
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
 }
