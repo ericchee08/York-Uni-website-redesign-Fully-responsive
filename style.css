@@ -6,7 +6,7 @@
 }
 
 .header{
-    min-height: 100vh; /* height and width of element is equal to 100% of the viewport */
+    min-height: 100vh; /* height and width of element is equal to 100% of the viewport (screen size visible - responsive to screensize */
     width: 100%;
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(york-images/York.jpg); /* linear gradient creates an image consisting of a progressive transition between two or more colors */
     background-position: center;
@@ -89,7 +89,6 @@ nav img {
     background: transparent;
     position: relative;
     cursor: pointer;  /* cursor style - althoeugh pointer is default */
-
 }
 
 .hero-btn:hover{
@@ -106,16 +105,16 @@ nav .fas{
 @media(max-width: 700px){
 
     nav img {
-        width:150px;
+        width:240px;
         height: auto;
     }
 
     .text-box h1{
-        font-size: 16px;
+        font-size: 21px;
     }
 
     .text-box p{
-        font-size: 10px;
+        font-size: 14px;
     }
 
     /* mobile navbar to be stacked on top of eachother using display: block; from display: relative */
@@ -146,7 +145,100 @@ nav .fas{
     .nav-links ul{
         padding: 15px;
     }
-   
+}
+
+/* Course */
+
+.course{
+    width:80%;
+    margin:auto;
+    text-align:center;
+    padding-top:100px;
+}
+
+h1{ /* text edit */
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{ /* text edit */
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{ /* layout edit */
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-col{ /* adding border and adjusting sizes */
+    flex-basis: 30%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;  /* add 1 second transition to the box shadow effect */
 }
 
 
+h3{
+    text-align: center;
+    font-weight: 600; 
+    margin: 10px 0;
+}
+
+/* adding shadow effects around an element's frame */
+.course-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);  /*  offset-x | offset-y | blur-radius | spread-radius | color  */
+}
+
+/* media query allows the course rows to be directed into a column using flexbox method */
+@media(max-width: 700px) {
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+/* campus */
+
+.campus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.campus-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* enables full image to fit within box */
+.campus-col img{
+    width: 100%;
+}
+
+.layer{
+    background:transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    font-size:0;
+}
+
+.layer:hover{
+    background: rgba(87, 83, 121, 0.7);
+    font-size: 20px;
+    color:white;
+}
