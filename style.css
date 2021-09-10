@@ -197,13 +197,12 @@ h3{
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);  /*  offset-x | offset-y | blur-radius | spread-radius | color  */
 }
 
-/* media query allows the course rows to be directed into a column using flexbox method */
+/* media query allows the course rows to be directed into a column using flexbox method - THIS ALSO AFFECT THE CAMPUS ROWS*/
 @media(max-width: 700px) {
     .row{
         flex-direction: column;
     }
 }
-
 
 /* campus */
 
