@@ -241,6 +241,7 @@ h3{
     background: rgba(87, 83, 121, 0.7);
 }
 
+/* setting the default hover effect - opacity at 0 */
 .layer h3{
     width: 100%;
     font-weight: 500;
@@ -257,4 +258,35 @@ h3{
 .layer:hover h3{
     bottom: 49%;
     opacity: 1;
+}
+
+/* facilities */
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.facilities-col p{
+    padding: 0;
+}
+
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
 }
