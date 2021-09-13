@@ -21,13 +21,14 @@ public static void main(String args[]) throws Exception
 	InetAddress IPAddress = receivePacket.getAddress();
 
 	// getPort() method of java Socket class returns the remote port number to which the socket is connected.
+	// allowing to write a reply back to the client
 	int port = receivePacket.getPort();
 
 	//perform capitalization function
 	String capitalizedSentence = sentence.toUpperCase();
 	sendData = capitalizedSentence.getBytes();
 
-	// write reply to serverSocket specifying client host address and porter number
+	// write reply to serverSocket specifying client host IP address and port number
 	DatagramPacket sendPacket = new DatagramPacket(sendData,
 	sendData.length, IPAddress, port);
 	serverSocket.send(sendPacket);
