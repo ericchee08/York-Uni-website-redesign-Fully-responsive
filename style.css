@@ -1,4 +1,4 @@
-/* Applies to all the html elements, set the padding and margin to zero to fill the page */
+/* Applies to all the HTML elements, set the padding and margin to zero to fill the page */
 *{
     padding: 0;
     margin: 0;
@@ -15,8 +15,8 @@
 }
 
 nav {
-    
     display: flex; /* flex direction defaults to horizontal alignment, used flex-direct: column to change to vertical */
+    /* flex-direction: column; */
     padding: 0% 6%;
     justify-content: space-between; /* space-between defines the alignment along the main axis, distribute free space leftver when either all the flex items on a line - in this case york pushed to left and nav to the right*/
     align-items: center;
@@ -28,13 +28,13 @@ nav img {
 }
 
 .nav-links {
-    flex: 1;
+    flex: 1;/* flex: 0 would disable the display: flex set in nav */
     text-align: right;
 }
 
 .nav-links ul li {
     list-style: none;  /* removes unordered list bullet points */
-    display: inline-block; /* allows navigation to be horizontal format */
+    display: inline-block; /* allows navigation to be horizontal format, inline-block container also allows height and width values */
     padding: 8px 12px;
     position: relative; /* element is positioned according to the normal flow of the document. Offset does not affect position of any other elements */
 }
@@ -60,7 +60,7 @@ nav img {
 }
 
 .text-box{
-    width: 50%;
+    width: 40%; /* take 40% of the width space of view port*/
     color: white;
     position: absolute; /* allows positioning exactly where you want it */
     top: 50%; /* top and left at 50% allows writing to be centre of the page */
@@ -92,7 +92,7 @@ nav img {
 }
 
 .hero-btn:hover{
-    border: 1px solid white;
+    /* border: 1px solid white; */
     background: rgb(37, 37, 37);
     transition: 1s;
 }
@@ -104,24 +104,28 @@ nav .fas{
 
 @media(max-width:721px){
 
+    /* enable nav icon buttons to be viewed during mobile view */
+    nav .fas{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
     nav img {
         width:240px;
         height: auto;
     }
-
     .text-box h1{
         font-size: 21px;
     }
-
     .text-box p{
         font-size: 14px;
     }
-
     /* mobile navbar to be stacked on top of eachother using display: block; from display: relative */
     .nav-links ul li{
         display: block;
         }
-
     .nav-links{
         position: absolute;
         background:#1f1f1f;
@@ -133,15 +137,6 @@ nav .fas{
         z-index: 2; /* z-index brings the element layer on top of all other layers, setting it to 0 will be placed behind the text */
         transition: 1s;    
     }
-
-    nav .fas{
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-
     .nav-links ul{
         padding: 15px;
     }
